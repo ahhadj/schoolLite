@@ -17,13 +17,13 @@
         "list": [{
                 "pagePath": "page/school/index",
                 "iconPath": "image/school.png",
-                "selectedIconPath": "image/school.png",
+                "selectedIconPath": "image/school_selected.png",
                 "text": "学校"
             },
             {
                 "pagePath": "page/my/index",
-                "iconPath": "image/my_male.png",
-                "selectedIconPath": "image/my_male.png",
+                "iconPath": "image/my.png",
+                "selectedIconPath": "image/my_selected.png",
                 "text": "我的"
             }
         ]

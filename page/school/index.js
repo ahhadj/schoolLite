@@ -1,3 +1,4 @@
+var base64 = require("../../image/base64");
 // page/school/index.js
 Page({
 
@@ -5,14 +6,17 @@ Page({
    * Page initial data
    */
   data: {
-
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData ({
+      currentCity: "杭州",
+      slogen: "百年大计，教育为本",
+      icon60: base64.icon60
+    })
   },
 
   /**

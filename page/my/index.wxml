@@ -1,5 +1,11 @@
 <page>
-    <view >
-    <text >我的</text>
+    <view class="school">
+        <view class="school-hd">
+            <image class="school-logo" src=""/>
+            <view class="school-search">
+                <text class="school-city">{{currentCity}}</text>
+                <input  class="school-search" placeholder="输入您关注的学校或小区"/> 
+            </view>
+        </view>
     </view>
 </page>

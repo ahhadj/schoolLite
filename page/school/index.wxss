@@ -1,1 +1,17 @@
 /* page/school/index.wxss */
+
+.bannerImge {
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+    max-height: 300rpx;
+}
+
+.school_search {
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.school_slogen {
+    text-align: center;
+}
