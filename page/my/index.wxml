@@ -2,7 +2,7 @@
     <view class="page__bd">
         <view class="weui-cell">
             <view class="weui-cell__hd my_avatar">
-                <image src="{{userInfo.avatarUrl}}" class="my_avatar_img"/>
+                <image src="{{userInfo.avatarUrl}}" class="my_avatar_img" />
             </view>
             <view class="weui-cell__bd">
                 <view>{{userInfo.nickName}}</view>
@@ -10,18 +10,18 @@
             </view>
         </view>
         <view class="weui-cell weui-cell_access">
-                <view class="weui-cell__bd">
-                    <view style="display: inline-block; vertical-align: middle">讨论一下</view>
-                    <view class="weui-badge" style="margin-left: 5px;">8</view>
-                </view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">详细信息</view>
+            <view class="weui-cell__bd">
+                <view style="display: inline-block; vertical-align: middle">讨论一下</view>
+                <view class="weui-badge" style="margin-left: 5px;">8</view>
             </view>
-            <view class="weui-cell weui-cell_access">
-                <view class="weui-cell__bd">
-                    <view style="display: inline-block; vertical-align: middle">FAQ</view>
-                    <view class="weui-badge" style="margin-left: 5px;">New</view>
-                </view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">详细信息</view>
+        </view>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__bd">
+                <view style="display: inline-block; vertical-align: middle">FAQ</view>
+                <view class="weui-badge" style="margin-left: 5px;">New</view>
             </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
     </view>
 </view>
