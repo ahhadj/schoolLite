@@ -22,17 +22,18 @@
             </block>
             <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform:translateX({{sliderOffset}}px);"></view>
         </view>
-        <view class="weui-panel weui-panel_access">
-            <view class="weui-panel__hd">西湖区</view>
-            <view class="weui-panel__bd">
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view wx:for="{{distribution}}" wx:for-item="dist" wx:key="id" class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">{{dist.name}}</view>
+                <view class="weui-panel__bd">
+                <navigator wx:for="{{activeIndex == 0 ? dist.primarySchools : dist.middleSchools}}" wx:for-item="school" wx:key="id"
+                    url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
                     <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                         <image class="weui-media-box__thumb" src="{{icon60}}" />
                     </view>
                     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">学军小学</view>
+                        <view class="weui-media-box__title">{{school.name}}</view>
                         <view class="weui-media-box__desc">
-                            由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+                            {{school.description}}
                         </view>
                     </view>
                 </navigator>

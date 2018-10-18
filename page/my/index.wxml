@@ -1,11 +1,13 @@
-<page>
-    <view class="school">
-        <view class="school-hd">
-            <image class="school-logo" src=""/>
-            <view class="school-search">
-                <text class="school-city">{{currentCity}}</text>
-                <input  class="school-search" placeholder="输入您关注的学校或小区"/> 
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cell">
+            <view class="weui-cell__hd my_avatar">
+                <image src="{{userInfo.avatarUrl}}" class="my_avatar_img"/>
+            </view>
+            <view class="weui-cell__bd">
+                <view>{{userInfo.nickName}}</view>
+                <view class="my_motto">Hello</view>
             </view>
         </view>
     </view>
-</page>
+</view>
