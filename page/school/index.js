@@ -1,4 +1,5 @@
 var base64 = require("../../image/base64");
+var sliderWidth = 96;
 // page/school/index.js
 Page({
 
@@ -6,17 +7,30 @@ Page({
    * Page initial data
    */
   data: {
+    tabs: ["搜小学", "搜初中"],
+    activeIndex: 0,
+    sliderOffset: 0,
+    sliderLeft: 0
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.setData ({
+    this.setData({
       currentCity: "杭州",
       slogen: "百年大计，教育为本",
-      icon60: base64.icon60
-    })
+      icon60: base64.icon60,
+    });
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
   },
 
   /**
@@ -66,5 +80,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  tabClick: function (e) {
+    this.setData({
+        sliderOffset: e.currentTarget.offsetLeft,
+        activeIndex: e.currentTarget.id
+    });
+}
 })
